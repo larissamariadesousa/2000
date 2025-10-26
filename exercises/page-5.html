@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ireland's Top Five Visitor Attractions - Larissa Maria</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #22C55E 0%, #16A34A 100%);
+            min-height: 100vh;
+        }
+        .ireland-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        .ireland-header {
+            background: linear-gradient(45deg, #22C55E, #16A34A, #059669);
+            color: white;
+            padding: 50px 40px;
+            text-align: center;
+            position: relative;
+        }
+        .ireland-header::after {
+            content: "🍀";
+            position: absolute;
+            font-size: 3rem;
+            top: 20px;
+            right: 40px;
+            opacity: 0.7;
+        }
+        .ireland-header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+        .ireland-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        .attractions-grid {
+            padding: 50px 40px;
+        }
+        .attraction {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 30px;
+            margin-bottom: 50px;
+            padding: 30px;
+            background: #F0FDF4;
+            border-radius: 15px;
+            border-left: 5px solid #22C55E;
+        }
+        .attraction:nth-child(even) {
+            grid-template-columns: 2fr 1fr;
+            background: #ECFDF5;
+        }
+        .attraction:nth-child(even) .attraction-image {
+            order: 2;
+        }
+        .attraction:nth-child(even) .attraction-info {
+            order: 1;
+        }
+        .attraction-image {
+            background: linear-gradient(45deg, #BBF7D0, #86EFAC);
+            height: 200px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #166534;
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+        .attraction-info h2 {
+            color: #166534;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+        .attraction-info p {
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+        .location {
+            background: #22C55E;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .fun-fact {
+            background: #FEF3C7;
+            border: 2px solid #F59E0B;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            font-style: italic;
+        }
+        .fun-fact strong {
+            color: #D97706;
+        }
+        @media (max-width: 768px) {
+            .attraction {
+                grid-template-columns: 1fr;
+            }
+            .attraction:nth-child(even) {
+                grid-template-columns: 1fr;
+            }
+            .attraction:nth-child(even) .attraction-image,
+            .attraction:nth-child(even) .attraction-info {
+                order: initial;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ireland-content">
+        <div class="ireland-header">
+            <h1>Ireland's Top Five Visitor Attractions</h1>
+            <p>Discover the magic of the Emerald Isle through its most beloved destinations</p>
+        </div>
+
+        <div class="attractions-grid">
+            <div class="attraction">
+                <div class="attraction-image">
+                    [Cliffs of Moher Image]
+                </div>
+                <div class="attraction-info">
+                    <h2>1. Cliffs of Moher</h2>
+                    <p>Rising majestically from the Atlantic Ocean, the Cliffs of Moher are Ireland's most visited natural attraction. These dramatic sea cliffs stretch for 8 kilometers along the western coast and reach heights of up to 214 meters.</p>
+                    <div class="fun-fact">
+                        <strong>Fun Fact:</strong> On clear days, you can see the Aran Islands and Galway Bay from the cliff tops!
+                    </div>
+                    <div class="location">📍 County Clare</div>
+                </div>
+            </div>
+
+            <div class="attraction">
+                <div class="attraction-image">
+                    [Ring of Kerry Image]
+                </div>
+                <div class="attraction-info">
+                    <h2>2. Ring of Kerry</h2>
+                    <p>This 179-kilometer circular route showcases the best of Kerry's stunning landscapes. From pristine lakes and mountains to charming villages and ancient ring forts, the Ring of Kerry offers breathtaking scenery at every turn.</p>
+                    <div class="fun-fact">
+                        <strong>Fun Fact:</strong> The route is so popular that tour buses are required to travel in one direction only to avoid traffic jams!
+                    </div>
+                    <div class="location">📍 County Kerry</div>
+                </div>
+            </div>
+
+            <div class="attraction">
+                <div class="attraction-image">
+                    [Giant's Causeway Image]
+                </div>
+                <div class="attraction-info">
+                    <h2>3. Giant's Causeway</h2>
+                    <p>This UNESCO World Heritage site features approximately 40,000 interlocking basalt columns formed by ancient volcanic activity. Legend says it was built by the Irish giant Finn MacCool as a path to Scotland.</p>
+                    <div class="fun-fact">
+                        <strong>Fun Fact:</strong> The columns are so perfectly geometric that early visitors thought they must be man-made!
+                    </div>
+                    <div class="location">📍 County Antrim, Northern Ireland</div>
+                </div>
+            </div>
+
+            <div class="attraction">
+                <div class="attraction-image">
+                    [Trinity College Image]
+                </div>
+                <div class="attraction-info">
+                    <h2>4. Trinity College & Book of Kells</h2>
+                    <p>Ireland's oldest university, founded in 1592, houses the famous Book of Kells - a beautifully illuminated 9th-century gospel manuscript. The stunning Long Room Library contains over 200,000 ancient books and manuscripts.</p>
+                    <div class="fun-fact">
+                        <strong>Fun Fact:</strong> The Long Room Library was the inspiration for the Jedi Archives in Star Wars!
+                    </div>
+                    <div class="location">📍 Dublin</div>
+                </div>
+            </div>
+
+            <div class="attraction">
+                <div class="attraction-image">
+                    [Blarney Castle Image]
+                </div>
+                <div class="attraction-info">
+                    <h2>5. Blarney Castle & Stone</h2>
+                    <p>This medieval fortress is famous worldwide for the Blarney Stone, which legend says grants the "gift of eloquence" to those who kiss it. The castle is set within beautiful gardens and offers stunning views of the Irish countryside.</p>
+                    <div class="fun-fact">
+                        <strong>Fun Fact:</strong> You have to lie on your back and bend backwards to kiss the stone - it's quite an adventure!
+                    </div>
+                    <div class="location">📍 County Cork</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="text-align: center; padding: 40px; background: white;">
+        <p style="margin-bottom: 20px; color: #166534; font-size: 1.1rem;">
+            <em>"Céad míle fáilte" - A hundred thousand welcomes! 🍀</em>
+        </p>
+        <a href="../index.html" style="color: #16A34A; text-decoration: none; padding: 12px 25px; border: 2px solid #16A34A; border-radius: 5px; transition: all 0.3s ease;">← Back to Portfolio</a>
+    </div>
+</body>
+</html>

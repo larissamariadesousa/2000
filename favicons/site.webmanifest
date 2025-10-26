@@ -1,7 +1,7 @@
 {
     "name": "Larissa Maria | Creative Digital Designer",
     "short_name": "Larissa Maria",
-    "description": "UI & UX designer based in Dublin. Mobile and Responsive Web Design, eCommerce Websites, Branding and Logo Design.",
+    "description": "Hi I'm Larissa, a UI & UX designer based in Dublin. Mobile and Responsive Web Design, eCommerce Websites, Branding and Logo Design.",
     "icons": [
         {
             "src": "android-chrome-192x192.png",
@@ -14,8 +14,9 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#ffffff",
+    "theme_color": "#667eea",
     "background_color": "#ffffff",
+    "start_url": "/",
     "display": "standalone",
-    "start_url": "../index.html"
+    "orientation": "portrait-primary"
 }

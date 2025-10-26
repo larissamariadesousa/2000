@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Block with Background Video - Larissa Maria</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
+        }
+        .hero-video-section {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+        .video-background {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            transform: translateX(-50%) translateY(-50%);
+            z-index: -2;
+        }
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(102, 126, 234, 0.7);
+            z-index: -1;
+        }
+        .animated-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(102, 126, 234, 0.8), rgba(118, 75, 162, 0.8));
+            z-index: -1;
+        }
+        .animated-bg::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                45deg,
+                rgba(255,255,255,0.03) 0px,
+                rgba(255,255,255,0.03) 2px,
+                transparent 2px,
+                transparent 20px
+            );
+            animation: movePattern 20s linear infinite;
+        }
+        @keyframes movePattern {
+            0% {
+                transform: translate(-50%, -50%);
+            }
+            100% {
+                transform: translate(-40%, -40%);
+            }
+        }
+        .hero-video-content {
+            max-width: 900px;
+            padding: 0 40px;
+            animation: slideInFromBottom 1.2s ease-out;
+            position: relative;
+            z-index: 2;
+        }
+        .hero-video-title {
+            font-size: 4.5rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+            letter-spacing: 2px;
+        }
+        .hero-video-subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+        .hero-video-description {
+            font-size: 1.3rem;
+            margin-bottom: 50px;
+            opacity: 0.85;
+            line-height: 1.7;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .video-hero-buttons {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn-video-primary {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.3);
+            color: white;
+            padding: 18px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-video-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        .btn-video-primary:hover::before {
+            left: 100%;
+        }
+        .btn-video-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            background: rgba(255,255,255,0.25);
+        }
+        .btn-video-secondary {
+            background: transparent;
+            color: white;
+            padding: 18px 40px;
+            text-decoration: none;
+            border: 2px solid rgba(255,255,255,0.6);
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+        .btn-video-secondary:hover {
+            background: white;
+            color: #667eea;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .play-button {
+            position: absolute;
+            bottom: 50px;
+            right: 50px;
+            width: 80px;
+            height: 80px;
+            background: rgba(255,255,255,0.2);
+            border: 2px solid rgba(255,255,255,0.5);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        .play-button:hover {
+            background: rgba(255,255,255,0.3);
+            transform: scale(1.1);
+        }
+        .play-icon {
+            width: 0;
+            height: 0;
+            border-left: 20px solid white;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            margin-left: 5px;
+        }
+        .floating-particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .particle {
+            position: absolute;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            animation: floatParticle 8s ease-in-out infinite;
+        }
+        .particle:nth-child(1) {
+            width: 6px;
+            height: 6px;
+            top: 20%;
+            left: 20%;
+            animation-delay: 0s;
+        }
+        .particle:nth-child(2) {
+            width: 8px;
+            height: 8px;
+            top: 80%;
+            left: 80%;
+            animation-delay: 2s;
+        }
+        .particle:nth-child(3) {
+            width: 4px;
+            height: 4px;
+            top: 40%;
+            right: 10%;
+            animation-delay: 4s;
+        }
+        .particle:nth-child(4) {
+            width: 10px;
+            height: 10px;
+            bottom: 30%;
+            left: 15%;
+            animation-delay: 6s;
+        }
+        @keyframes slideInFromBottom {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes floatParticle {
+            0%, 100% {
+                transform: translateY(0px) translateX(0px);
+                opacity: 0.3;
+            }
+            25% {
+                transform: translateY(-30px) translateX(20px);
+                opacity: 0.7;
+            }
+            50% {
+                transform: translateY(-60px) translateX(-10px);
+                opacity: 1;
+            }
+            75% {
+                transform: translateY(-30px) translateX(-30px);
+                opacity: 0.7;
+            }
+        }
+        .video-info {
+            position: absolute;
+            bottom: 30px;
+            left: 50px;
+            color: rgba(255,255,255,0.8);
+            font-size: 0.9rem;
+        }
+        .content-section {
+            padding: 80px 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+            background: white;
+        }
+        .content-section h2 {
+            color: #667eea;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+        .content-section p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 768px) {
+            .hero-video-title {
+                font-size: 2.8rem;
+            }
+            .hero-video-subtitle {
+                font-size: 1.3rem;
+            }
+            .hero-video-description {
+                font-size: 1.1rem;
+            }
+            .video-hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            .btn-video-primary, .btn-video-secondary {
+                width: 280px;
+                text-align: center;
+            }
+            .play-button {
+                bottom: 20px;
+                right: 20px;
+                width: 60px;
+                height: 60px;
+            }
+            .play-icon {
+                border-left: 15px solid white;
+                border-top: 10px solid transparent;
+                border-bottom: 10px solid transparent;
+            }
+            .video-info {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero-video-section">
+        <!-- Animated background instead of video for compatibility -->
+        <div class="animated-bg"></div>
+        
+        <div class="floating-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        
+        <div class="hero-video-content">
+            <h1 class="hero-video-title">Motion & Emotion</h1>
+            <p class="hero-video-subtitle">Where Design Meets Dynamic Storytelling</p>
+            <p class="hero-video-description">
+                Experience the power of video backgrounds in web design. We create immersive digital experiences 
+                that captivate your audience and tell your brand's story through motion, color, and compelling visuals.
+            </p>
+            <div class="video-hero-buttons">
+                <a href="#portfolio" class="btn-video-primary">Watch Our Reel</a>
+                <a href="#contact" class="btn-video-secondary">Start Project</a>
+            </div>
+        </div>
+        
+        <div class="play-button" onclick="toggleVideo()">
+            <div class="play-icon"></div>
+        </div>
+        
+        <div class="video-info">
+            <p>Background: Animated CSS Pattern</p>
+            <p>Duration: Infinite Loop</p>
+        </div>
+    </section>
+    
+    <section class="content-section">
+        <h2>Hero Block with Background Video</h2>
+        <p>
+            This hero section demonstrates how to create a stunning full-screen header with video-like effects. 
+            While using an animated CSS background for better performance and compatibility, it achieves 
+            the same visual impact as a background video.
+        </p>
+        <p>
+            Key features include responsive design, animated particles, glassmorphism effects, and 
+            smooth transitions. The design works perfectly across all devices and browsers without 
+            the loading time and bandwidth concerns of actual video files.
+        </p>
+        <p>
+            <strong>For real video backgrounds:</strong> Replace the animated background with a 
+            &lt;video&gt; element using the video-background class. Popular video formats include 
+            MP4, WebM, and OGV for cross-browser compatibility.
+        </p>
+        
+        <div style="margin-top: 40px;">
+            <a href="../index.html" style="color: #667eea; text-decoration: none; padding: 12px 25px; border: 2px solid #667eea; border-radius: 5px; transition: all 0.3s ease;">← Back to Portfolio</a>
+        </div>
+    </section>
+    
+    <script>
+        function toggleVideo() {
+            // This would control video playback in a real video background implementation
+            const playButton = document.querySelector('.play-button');
+            const playIcon = document.querySelector('.play-icon');
+            
+            // Simulate play/pause toggle
+            if (playIcon.style.borderLeftWidth === '0px') {
+                // Show play icon
+                playIcon.style.borderLeft = '20px solid white';
+                playIcon.style.borderTop = '15px solid transparent';
+                playIcon.style.borderBottom = '15px solid transparent';
+                playIcon.style.borderRight = 'none';
+                playButton.style.background = 'rgba(255,255,255,0.2)';
+            } else {
+                // Show pause icon
+                playIcon.style.borderLeft = '8px solid white';
+                playIcon.style.borderTop = 'none';
+                playIcon.style.borderBottom = 'none';
+                playIcon.style.borderRight = '8px solid white';
+                playIcon.style.marginLeft = '0px';
+                playButton.style.background = 'rgba(255,255,255,0.3)';
+            }
+        }
+    </script>
+</body>
+</html>

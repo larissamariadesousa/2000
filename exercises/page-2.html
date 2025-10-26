@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purple Rain - Larissa Maria</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <style>
+        body {
+            background: linear-gradient(45deg, #8B5CF6, #6366F1, #3B82F6);
+            min-height: 100vh;
+        }
+        .purple-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.95);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(139, 92, 246, 0.3);
+            backdrop-filter: blur(10px);
+        }
+        .purple-content h1 {
+            background: linear-gradient(45deg, #8B5CF6, #6366F1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 3rem;
+        }
+        .rain-drops {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        .drop {
+            position: absolute;
+            width: 2px;
+            height: 20px;
+            background: rgba(139, 92, 246, 0.6);
+            animation: rain 1s linear infinite;
+        }
+        @keyframes rain {
+            0% { transform: translateY(-100vh); }
+            100% { transform: translateY(100vh); }
+        }
+        .song-info {
+            text-align: center;
+            margin: 30px 0;
+            font-style: italic;
+            color: #6366F1;
+        }
+        .lyrics {
+            background: rgba(139, 92, 246, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px 0;
+            border-left: 5px solid #8B5CF6;
+        }
+    </style>
+</head>
+<body>
+    <div class="rain-drops">
+        <div class="drop" style="left: 10%; animation-delay: 0s;"></div>
+        <div class="drop" style="left: 20%; animation-delay: 0.2s;"></div>
+        <div class="drop" style="left: 30%; animation-delay: 0.4s;"></div>
+        <div class="drop" style="left: 40%; animation-delay: 0.6s;"></div>
+        <div class="drop" style="left: 50%; animation-delay: 0.8s;"></div>
+        <div class="drop" style="left: 60%; animation-delay: 1s;"></div>
+        <div class="drop" style="left: 70%; animation-delay: 0.3s;"></div>
+        <div class="drop" style="left: 80%; animation-delay: 0.7s;"></div>
+        <div class="drop" style="left: 90%; animation-delay: 0.9s;"></div>
+    </div>
+
+    <div class="purple-content">
+        <h1>Purple Rain</h1>
+        
+        <div class="song-info">
+            <p><strong>Artist:</strong> Prince</p>
+            <p><strong>Album:</strong> Purple Rain (1984)</p>
+        </div>
+        
+        <div class="lyrics">
+            <p>I never meant to cause you any sorrow<br>
+            I never meant to cause you any pain<br>
+            I only wanted to one time to see you laughing<br>
+            I only wanted to see you<br>
+            Laughing in the purple rain</p>
+            
+            <p>Purple rain, purple rain<br>
+            Purple rain, purple rain<br>
+            Purple rain, purple rain<br>
+            I only wanted to see you<br>
+            Bathing in the purple rain</p>
+        </div>
+        
+        <p>This iconic song by Prince showcases his incredible musical talent and emotional depth. The purple rain serves as a metaphor for a spiritual cleansing and emotional release, creating one of the most memorable and powerful songs in music history.</p>
+        
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="../index.html" style="color: #8B5CF6; text-decoration: none; padding: 10px 20px; border: 2px solid #8B5CF6; border-radius: 5px; transition: all 0.3s ease;">← Back to Portfolio</a>
+        </div>
+    </div>
+</body>
+</html>

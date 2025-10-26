@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vincent van Gogh - Larissa Maria</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <style>
+        body {
+            background: #FEF3C7;
+        }
+        .artist-content {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .artist-header {
+            background: linear-gradient(45deg, #F59E0B, #D97706);
+            color: white;
+            padding: 50px 40px;
+            text-align: center;
+        }
+        .artist-header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        .artist-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        .content-section {
+            padding: 40px;
+        }
+        .artwork-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+        .artwork-card {
+            background: #FFFBEB;
+            padding: 20px;
+            border-radius: 15px;
+            border: 3px solid #FED7AA;
+            text-align: center;
+        }
+        .artwork-card h3 {
+            color: #D97706;
+            margin-bottom: 10px;
+        }
+        .artwork-placeholder {
+            width: 100%;
+            height: 150px;
+            background: linear-gradient(45deg, #FED7AA, #FBBF24);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #92400E;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        .quote {
+            background: #FEF3C7;
+            border-left: 5px solid #F59E0B;
+            padding: 25px;
+            margin: 30px 0;
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+        .timeline {
+            background: #FFFBEB;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+        .timeline h3 {
+            color: #D97706;
+            margin-bottom: 20px;
+        }
+        .timeline-item {
+            display: flex;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #FED7AA;
+        }
+        .year {
+            font-weight: bold;
+            color: #92400E;
+            min-width: 60px;
+        }
+        .event {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="artist-content">
+        <div class="artist-header">
+            <h1>Vincent van Gogh</h1>
+            <p>Dutch Post-Impressionist Painter (1853-1890)</p>
+        </div>
+
+        <div class="content-section">
+            <p>Vincent Willem van Gogh was a Dutch post-impressionist painter who is among the most famous and influential figures in the history of Western art. In just over a decade, he created approximately 2,100 artworks, including around 860 oil paintings, most of them in the last two years of his life.</p>
+
+            <div class="quote">
+                <p>"I dream of painting and then I paint my dream."</p>
+                <p style="text-align: right; margin-top: 10px; font-size: 0.9rem;">— Vincent van Gogh</p>
+            </div>
+
+            <h2 style="color: #D97706; margin: 30px 0 20px 0;">Famous Artworks</h2>
+            <div class="artwork-grid">
+                <div class="artwork-card">
+                    <div class="artwork-placeholder">
+                        [Starry Night Image]
+                    </div>
+                    <h3>The Starry Night</h3>
+                    <p>1889 - Oil on canvas</p>
+                </div>
+                <div class="artwork-card">
+                    <div class="artwork-placeholder">
+                        [Sunflowers Image]
+                    </div>
+                    <h3>Sunflowers</h3>
+                    <p>1888 - Oil on canvas</p>
+                </div>
+                <div class="artwork-card">
+                    <div class="artwork-placeholder">
+                        [Self-Portrait Image]
+                    </div>
+                    <h3>Self-Portrait</h3>
+                    <p>1889 - Oil on canvas</p>
+                </div>
+            </div>
+
+            <div class="timeline">
+                <h3>Life Timeline</h3>
+                <div class="timeline-item">
+                    <div class="year">1853</div>
+                    <div class="event">Born in Groot-Zundert, Netherlands</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="year">1869</div>
+                    <div class="event">Started working at art dealer Goupil & Cie</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="year">1880</div>
+                    <div class="event">Decided to become an artist</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="year">1888</div>
+                    <div class="event">Moved to Arles, France - most productive period</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="year">1890</div>
+                    <div class="event">Died in Auvers-sur-Oise, France</div>
+                </div>
+            </div>
+
+            <p>Van Gogh's work had a far-reaching influence on 20th-century art. His use of color, rough brushwork and primitivist composition, irrespective of his late start, were inspirational to the Fauves and German expressionists in the early 20th century.</p>
+        </div>
+    </div>
+
+    <div style="text-align: center; padding: 40px;">
+        <a href="../index.html" style="color: #D97706; text-decoration: none; padding: 12px 25px; border: 2px solid #D97706; border-radius: 5px; transition: all 0.3s ease;">← Back to Portfolio</a>
+    </div>
+</body>
+</html>

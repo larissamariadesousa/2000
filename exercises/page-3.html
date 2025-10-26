@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page with Sections - Larissa Maria</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <style>
+        body {
+            background: #f8fafc;
+        }
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        .section {
+            padding: 60px 0;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section:nth-child(even) {
+            background: white;
+        }
+        .section-content {
+            padding: 0 40px;
+        }
+        .section h2 {
+            color: #667eea;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            text-align: center;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 40px 0;
+        }
+        .stat {
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #667eea;
+        }
+        .stat-label {
+            color: #666;
+            margin-top: 10px;
+        }
+        .cta {
+            background: #667eea;
+            color: white;
+            text-align: center;
+            padding: 60px 40px;
+        }
+        .cta h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="section-content">
+            <h1>Modern Web Sections</h1>
+            <p>A demonstration of well-structured web page sections with modern design</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-content">
+            <h2>About Our Services</h2>
+            <p>We provide comprehensive web design solutions that combine creativity with functionality. Our approach focuses on user experience and modern design principles.</p>
+            
+            <div class="grid">
+                <div class="card">
+                    <h3>UI/UX Design</h3>
+                    <p>Creating intuitive and beautiful user interfaces that enhance user experience and drive engagement.</p>
+                </div>
+                <div class="card">
+                    <h3>Responsive Development</h3>
+                    <p>Building websites that work perfectly across all devices and screen sizes with modern technologies.</p>
+                </div>
+                <div class="card">
+                    <h3>Brand Identity</h3>
+                    <p>Developing cohesive brand identities that reflect your company's values and connect with your audience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-content">
+            <h2>Our Impact</h2>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Client Satisfaction</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">5</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Support Available</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2>Ready to Start Your Project?</h2>
+        <p>Let's work together to create something amazing for your business</p>
+        <a href="#contact" class="btn">Get In Touch</a>
+    </section>
+
+    <div style="text-align: center; padding: 40px;">
+        <a href="../index.html" style="color: #667eea; text-decoration: none; padding: 10px 20px; border: 2px solid #667eea; border-radius: 5px;">← Back to Portfolio</a>
+    </div>
+</body>
+</html>
